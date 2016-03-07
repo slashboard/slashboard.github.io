@@ -1,0 +1,7 @@
+body{
+    overflow-x:hidden;
+}
+
+#chart-stream{
+    margin-top: 20px;
+}
