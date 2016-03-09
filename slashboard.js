@@ -4,37 +4,32 @@
 
 var
     slashboard = angular.module('slashboard',['zingchart-angularjs'])
-    .controller('mainCtrl',['$scope','$http',function($scope,$http){
+    .controller('mainCtrl',['$scope','$http','$location',function($scope,$http,$location){
 
             var ping = function(){
-                $http.get($scope.webhook_url).success(function(data){
+                $http.get($scope.webhookurl).success(function(data){
                     $scope.slashboard = data["slashboard"] || data;
-                }).error(function(data,err){
-                    //console.log(err);
-                    //var msg = "", title="";
-                    //switch(err){
-                    //    case -1: //Connection refused
-                    //        title = "Oops..."
-                    //        msg = "The connection was refused. This normally means that the server isn't turned on or it doesn't have that path";
-                    //    break;
-                    //    case 404:
-                    //        title = "Hmmm..."
-                    //        msg = "No page was found. please check if the webhook is spelled the right way";
-                    //    break;
-                    //}
-                    //sweetAlert(title, msg, "error");
-                });
+                    if(typeof $scope.slashboard.links === "string"){
+                        $http.get($scope.slashboard.links).success(function(data){
+                            $scope.slashboard.menu = data;
+                        })
+                    }else{
+                        $scope.slashboard.menu = $scope.slashboard.links;
+                    }
+                    $location.search('webhookurl',$scope.webhookurl);
+                })
             };
+
+            $scope.webhookurl = $location.search().webhookurl || "";
+            ping();
 
             $scope.fetch = function(){
                 ping();
             };
 
             $scope.goTo = function(url){
-                $scope.webhook_url = url;
+                $scope.webhookurl = url;
                 ping();
             };
-
-        console.log("We good");
     }])
 ;

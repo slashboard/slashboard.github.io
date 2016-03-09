@@ -1,0 +1,10 @@
+[
+  {
+    "label":"Home",
+    "url":"sample.json"
+  },
+  {
+    "label":"Movies",
+    "url":"sample2.json"
+  }
+]
