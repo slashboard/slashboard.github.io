@@ -18,7 +18,7 @@
         </div>
         <div class="row" id="menu">
             <ul class="nav nav-pills nav-stacked" ng-cloak>
-                <li ng-repeat="link in slashboard.links" ng-class="{active: link.url===webhook_url}" ng-click="goTo(link.url)"><a href="#" data-toggle="tab">{{link.label}}</a></li>
+                <li ng-repeat="link in slashboard.menu" ng-class="{active: link.url===webhookurl}" ng-click="goTo(link.url)"><a href="#" data-toggle="tab">{{link.label}}</a></li>
             </ul>
         </div>
     </div>
@@ -31,8 +31,8 @@
         <div class="row">
             <div class="col-xs-11">
                 <div class="input-group">
-                    <div class="input-group-addon">Webook URL</div>
-                    <input type="text" class="form-control btn-block" id="webhook_url" ng-change="fetch()" ng-model="webhook_url" placeholder="URL">
+                    <div class="input-group-addon">Webhook URL</div>
+                    <input type="text" class="form-control btn-block" id="webhook_url" ng-change="fetch()" ng-model="webhookurl" placeholder="URL">
                 </div>
             </div>
             <div class="col-xs-1">

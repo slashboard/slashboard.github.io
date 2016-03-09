@@ -2,16 +2,7 @@
   "slashboard": {
     "app":"Speeda",
     "version": "0.0",
-    "links":[
-      {
-        "label":"Home",
-        "url":"sample.json"
-      },
-      {
-        "label":"Movies",
-        "url":"sample2.json"
-      }
-    ],
+    "links":"sampleMenu.json",
     "charts": [
       {
         "title":"",
