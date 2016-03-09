@@ -5,11 +5,11 @@
     "links":[
       {
         "label":"Home",
-        "url":"http://localhost:8888/slashboard/sample.json"
+        "url":"sample.json"
       },
       {
         "label":"Movies",
-        "url":"http://localhost:8888/slashboard/sample2.json"
+        "url":"sample2.json"
       }
     ],
     "charts": [
