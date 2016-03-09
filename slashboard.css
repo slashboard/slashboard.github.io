@@ -2,6 +2,18 @@ body{
     overflow-x:hidden;
 }
 
-#chart-stream{
-    margin-top: 20px;
+#chart-stream,#menu{
+    margin-top: 23px;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak, .ng-hide {
+    display: none !important;
+}
+
+.block{
+    height: 40px;
+}
+
+.nav>li>a{
+    padding: 6px 12px
 }

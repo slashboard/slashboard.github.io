@@ -1,77 +1,92 @@
 {
   "slashboard": {
+    "app":"Speeda",
     "version": "0.0",
+    "links":[
+      {
+        "label":"Home",
+        "url":"http://localhost:8888/slashboard/sample.json"
+      },
+      {
+        "label":"Movies",
+        "url":"http://localhost:8888/slashboard/sample2.json"
+      }
+    ],
     "charts": [
       {
-        "title":"Demo line chart",
-        "render":"zing",
-        "col":"col-md-4",
+        "title":"",
+        "engine":"zing",
+        "render":{
+          "width":"100%",
+          "height":"100",
+          "autoResize":true
+        },
+        "col":"col-md-2",
         "data":{
-            "type":"line",
-            "width":"100%",
-            "height":"100%",
-            "series" : [
-            { "values" : [54,23,34,23,43] },
-            { "values" : [10,15,16,20,40] }
-            ]
+          "type": "null",
+          "x": "0%",
+          "y": "0%",
+          "height": "100",
+          "width": "100%",
+          "border-width": "1px",
+          "border-color": "#384653",
+          "border-radius": 4,
+          "background-color": "#fbfcf7",
+          "title": {
+            "text": "Users",
+            "background-color": "none",
+            "font-color": "#384653",
+            "font-size": "12px",
+            "text-align": "center",
+            "height": "70px"
+          },
+          "subtitle": {
+            "text": "1",
+            "font-color": "#dd655f",
+            "font-size": "24px",
+            "bold": true,
+            "text-align": "center",
+            "height": "40px",
+            "padding-top": "25%"
+          }
         }
       },
       {
-        "title":"Users",
-        "render":"zing",
-        "col":"col-md-4",
-        "data":{
-          "type":"pie",
-          "plot":{
-            "slice":"70%",
-            "value-box":{
-              "text":"%pie-total-value User(s)",
-              "placement":"center",
-              "font-color":"black",
-              "font-size":30,
-              "font-weight":"normal",
-              "rules":[
-                {
-                  "rule":"%p != 0",
-                  "visible":false
-                }
-              ]
-            }
-          },
+        "title":"",
+        "engine":"zing",
+        "render":{
           "width":"100%",
-          "height":"100%",
-          "series" : [
-            { "values" : [1],"text":"Users" }
-          ]
-        }
-      },
-      {
-        "title":"Users",
-        "render":"zing",
-        "col":"col-md-4",
+          "height":"100",
+          "autoResize":true
+        },
+        "col":"col-md-2",
         "data":{
-          "type":"pie",
-          "plot":{
-            "slice":"70%",
-            "value-box":{
-              "text":"%pie-total-value User(s)",
-              "placement":"center",
-              "font-color":"black",
-              "font-size":30,
-              "font-weight":"normal",
-              "rules":[
-                {
-                  "rule":"%p != 0",
-                  "visible":false
-                }
-              ]
-            }
+          "type": "null",
+          "x": "0%",
+          "y": "0%",
+          "height": "100",
+          "width": "100%",
+          "border-width": "1px",
+          "border-color": "#384653",
+          "border-radius": 4,
+          "background-color": "#fbfcf7",
+          "title": {
+            "text": "Likes",
+            "background-color": "none",
+            "font-color": "#384653",
+            "font-size": "12px",
+            "text-align": "center",
+            "height": "70px"
           },
-          "width":"100%",
-          "height":"100%",
-          "series" : [
-            { "values" : [1],"text":"Users" }
-          ]
+          "subtitle": {
+            "text": "1",
+            "font-color": "#dd655f",
+            "font-size": "24px",
+            "bold": true,
+            "text-align": "center",
+            "height": "40px",
+            "padding-top": "25%"
+          }
         }
       }
     ]
