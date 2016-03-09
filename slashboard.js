@@ -10,19 +10,19 @@ var
                 $http.get($scope.webhook_url).success(function(data){
                     $scope.slashboard = data["slashboard"] || data;
                 }).error(function(data,err){
-                    console.log(err);
-                    var msg = "", title="";
-                    switch(err){
-                        case -1: //Connection refused
-                            title = "Oops..."
-                            msg = "The connection was refused. This normally means that the server isn't turned on or it doesn't have that path";
-                        break;
-                        case 404:
-                            title = "Hmmm..."
-                            msg = "No page was found. please check if the webhook is spelled the right way";
-                        break;
-                    }
-                    sweetAlert(title, msg, "error");
+                    //console.log(err);
+                    //var msg = "", title="";
+                    //switch(err){
+                    //    case -1: //Connection refused
+                    //        title = "Oops..."
+                    //        msg = "The connection was refused. This normally means that the server isn't turned on or it doesn't have that path";
+                    //    break;
+                    //    case 404:
+                    //        title = "Hmmm..."
+                    //        msg = "No page was found. please check if the webhook is spelled the right way";
+                    //    break;
+                    //}
+                    //sweetAlert(title, msg, "error");
                 });
             };
 
